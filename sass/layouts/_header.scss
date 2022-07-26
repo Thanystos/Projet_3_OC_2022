@@ -1,0 +1,16 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../components/button";
+
+header {
+    text-align: center;
+}
+
+
+
+
+
+
+/*@include old-mobile {
+        color: map-get($colors, color-tertiary);
+    }*/

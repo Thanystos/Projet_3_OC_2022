@@ -1,1 +1,13 @@
-$colour-primary: #15DEA5;
+$colors: (
+    color-primary: #9356DC,
+    color-secondary: #FF79DA,
+    color-tertiary: #99E2D0,
+    background-primary-color: #eaeaea,
+    background-secondary-color: #f6f6f6
+);
+
+$breakpoints: (
+    oldmobile: 570px,
+    mobile: 768px,
+    tablet: 992px
+);

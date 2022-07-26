@@ -1,0 +1,8 @@
+button {
+    background: linear-gradient(355deg, map-get($colors, color-primary) 25%, map-get($colors, color-secondary) 100%);
+    width: 175px;
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+}

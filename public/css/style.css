@@ -1,5 +1,67 @@
-h1 {
-  color: #15DEA5;
+@font-face {
+  font-family: "Shrikland";
+  src: url("../../public/assets/polices/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/assets/polices//Roboto/Roboto-Regular.ttf");
+}
+* {
+  font-family: Roboto;
+}
+
+.header__logo {
+  font-family: Shrikland;
+}
+
+body {
+  font-size: 12px;
+}
+
+button {
+  background: linear-gradient(355deg, #9356DC 25%, #FF79DA 100%);
+  width: 175px;
+  height: 35px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+header {
+  text-align: center;
+}
+
+/*@include old-mobile {
+        color: map-get($colors, color-tertiary);
+    }*/
+.location {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+}
+.location__icon {
+  margin-right: 15px;
+}
+
+.explore {
+  text-align: center;
+  padding: 15px;
+  background-color: #f6f6f6;
+}
+.explore__title {
+  margin: 0px;
+  padding: 0 15px 0 15px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

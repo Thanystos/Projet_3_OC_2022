@@ -1,5 +1,4 @@
 @import "./utils/variables";
-
-h1 {
-    color: $colour-primary;
-}
+@import "./base/typography";
+@import "./pages/home";
+@import "./base/base";
