@@ -1,7 +1,10 @@
 @import "../layouts/header";
+@import "../components/button";
+@import "../utils/variables";
+@import "../utils/mixins";
 
 .location {
-    text-align: center; // dup .explore, header
+    text-align: center; // dup .explore, header, explanation
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -14,10 +17,47 @@
 
 .explore {
     text-align: center; 
-    padding: 15px;
+    padding: 15px; // dup .howitworks
     background-color: map-get($colors, background-secondary-color);
     &__title {
         margin: 0px;
         padding: 0 15px 0 15px;
     }
+}
+
+.howitworks {
+    max-width: 250px;
+    margin: auto;
+    margin-top: 25px;
+    padding: 15px;
+    &__title {
+        margin-bottom: 20px;
+    }
+}
+
+.explanation {
+    height: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: map-get($colors, background-secondary-color);
+    margin-bottom: 30px;
+    border-radius: 15px;  // dup comp button
+    &:hover {
+        background-color: lighten(map-get($colors, color-primary), $amount: 35);
+    }
+    &__number {
+        color: white;
+        position: relative;
+            left: -10px;
+        line-height: 20px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: map-get($colors, color-primary);
+    }
+}
+
+.instruction__icon {
+    margin: 0 20px 0 10px;
 }
