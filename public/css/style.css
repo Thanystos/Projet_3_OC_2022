@@ -10,7 +10,7 @@
   font-family: Roboto;
 }
 
-.header__logo, .footer__logo {
+.header__logo, .footer__logo, .menu-header__title {
   font-family: Shrikland;
 }
 
@@ -18,13 +18,21 @@ body {
   font-size: 12px;
 }
 
-header {
-  text-align: center;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__navigation-icon {
+  position: absolute;
+  top: 24.75px;
+  left: 15px;
 }
 
 /*@include old-mobile {
         color: map-get($colors, color-tertiary);
-    }*/
+    }*
+*/
 .footer {
   color: white;
   background-color: #353535;
@@ -41,6 +49,8 @@ header {
 
 button {
   background: linear-gradient(355deg, #9356DC 25%, #FF79DA 100%);
+  -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
   width: 175px;
   height: 35px;
   border: none;
@@ -88,6 +98,8 @@ button {
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
+  -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   border-radius: 15px;
 }
@@ -121,6 +133,8 @@ button {
   max-width: 350px;
   margin: auto;
   background-color: white;
+  -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   border-radius: 15px;
 }
@@ -145,6 +159,62 @@ button {
 }
 .restaurant-infos__description {
   margin-bottom: 0px;
+}
+
+button {
+  background: linear-gradient(355deg, #9356DC 25%, #FF79DA 100%);
+  -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
+  width: 175px;
+  height: 35px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+.menu-illustration__img {
+  height: 225px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  top: -35px;
+  background-color: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 15px;
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  background-color: #f6f6f6;
+}
+.menu__order {
+  text-align: center;
+  margin: 50px 0 15px 0;
+}
+
+.choice-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+body {
+  background-color: #f6f6f6;
 }
 
 html {

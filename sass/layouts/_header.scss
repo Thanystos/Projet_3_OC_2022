@@ -1,5 +1,12 @@
-header {
-    text-align: center;
+.header {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    &__navigation-icon {
+        position: absolute;
+        top: 24.75px;
+        left: 15px;
+    }
 }
 
 
@@ -9,4 +16,5 @@ header {
 
 /*@include old-mobile {
         color: map-get($colors, color-tertiary);
-    }*/
+    }*
+*/
