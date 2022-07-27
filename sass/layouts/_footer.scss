@@ -1,0 +1,17 @@
+@import "../utils/variables";
+
+.footer {
+    color: white;
+    background-color: map-get($colors, background-tertiary-color);
+    padding: 15px;
+    &__logo {
+        margin-top: 0px;
+    }
+}
+
+.footer-navigation {
+    &__icon {
+        width: 16px;
+        margin-right: 5px;
+    }
+}
