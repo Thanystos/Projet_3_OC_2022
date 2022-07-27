@@ -48,7 +48,7 @@ button {
 
 .explore {
   text-align: center;
-  padding: 15px;
+  padding: 30px;
   background-color: #f6f6f6;
 }
 .explore__title {
@@ -60,10 +60,12 @@ button {
   max-width: 250px;
   margin: auto;
   margin-top: 25px;
-  padding: 15px;
+  padding: 15px 15px 15px 25px;
 }
 .howitworks__title {
   margin-bottom: 20px;
+  position: relative;
+  left: -10px;
 }
 
 .explanation {
@@ -89,8 +91,46 @@ button {
   background-color: #9356DC;
 }
 
+.instruction {
+  font-weight: bold;
+}
 .instruction__icon {
   margin: 0 20px 0 10px;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 15px;
+}
+
+.restaurant {
+  max-width: 350px;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.restaurant-image__img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.restaurant-miscellanous {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.restaurant-infos__title {
+  margin: 0px;
+}
+.restaurant-infos__description {
+  margin-bottom: 0px;
 }
 
 html {

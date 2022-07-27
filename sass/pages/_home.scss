@@ -17,7 +17,7 @@
 
 .explore {
     text-align: center; 
-    padding: 15px; // dup .howitworks
+    padding: 30px;
     background-color: map-get($colors, background-secondary-color);
     &__title {
         margin: 0px;
@@ -29,9 +29,11 @@
     max-width: 250px;
     margin: auto;
     margin-top: 25px;
-    padding: 15px;
+    padding: 15px 15px 15px 25px;
     &__title {
         margin-bottom: 20px;
+        position: relative;
+        left: -10px;
     }
 }
 
@@ -58,6 +60,48 @@
     }
 }
 
-.instruction__icon {
+.instruction {
+    font-weight: bold;
+    &__icon {
     margin: 0 20px 0 10px;
+    }
+}
+
+.restaurants {
+    background-color: map-get($colors, background-secondary-color);
+    padding: 15px;
+}
+
+.restaurant {
+    max-width: 350px;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.restaurant-image {
+    &__img {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+}
+
+.restaurant-miscellanous {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.restaurant-infos {
+    &__title {
+        margin: 0px;
+    }
+    &__description {
+        margin-bottom: 0px;
+    }
 }
