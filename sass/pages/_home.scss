@@ -39,6 +39,9 @@
 }
 
 .explanation {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
     height: 60px;
     text-align: center;
     display: flex;
@@ -49,12 +52,25 @@
     margin-bottom: 30px;
     border-radius: 15px;  // dup comp button
     &:hover {
+        &::after, .instruction-icons__colored {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
         background-color: lighten(map-get($colors, color-primary), $amount: 35);
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6); 
+        box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6);
+        transition: opacity 250ms ease-in-out;
     }
-    &:hover i {
-        color: map-get($colors, color-primary);
-    }
-    
     &__number {
         color: white;
         position: relative;
@@ -68,9 +84,22 @@
 }
 
 .instruction {
+    display: flex;
     font-weight: bold;
-    &__icon {
+}
+
+.instruction-icons {
+    position: relative;
+    & i {
     margin: 0 20px 0 10px;
+    }
+    &__colored {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: map-get($colors, color-primary);
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
     }
 }
 
@@ -80,6 +109,8 @@
 }
 
 .restaurant {
+    position: relative;
+    z-index: 1;
     max-width: 350px;
     margin: auto;
     background-color: white;
@@ -87,10 +118,35 @@
     box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1);
     margin-bottom: 20px;
     border-radius: 15px;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6); 
+        box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6);
+        transition: opacity 250ms ease-in-out;
+    }
+    &__link {
+        position: absolute;
+        top: 0;
+        bottom: 65px;
+        left: 0;
+        right: 0;
+    }
 }
 
 .restaurant-image {
-    position: relative;
     &__img {
         height: 150px;
         width: 100%;
@@ -98,6 +154,7 @@
         border-radius: 15px;
     }
     &__new {
+        cursor: pointer;
         width: 25%;
         height: 25px;
         text-align: center;
@@ -120,10 +177,37 @@
 }
 
 .restaurant-infos {
+    width: 90%;
+    position: relative;
+    &__link {
+        position: absolute;
+        top: -15px;
+        bottom: 0;
+        left: -15px;
+        right: 0;
+    }
     &__title {
         margin: 0px;
     }
     &__description {
         margin: 5px 0 0 0;
+    }
+}
+
+.restaurant-icons {
+    position: relative;
+    &:hover &__solid {
+        opacity: 1;
+    }
+    &__regular {
+        color:map-get($colors, color-primary);
+    }
+    &__solid {
+        color: map-get($colors, color-primary);
+        position: absolute;
+        top: 7px;
+        left: 0;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
     }
 }

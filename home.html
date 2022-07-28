@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="public/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="public/css/style.css">
         <title>Ohmyfood - Réservez vos plats préférés en 5 minutes</title>
     </head>
     <body>
@@ -31,7 +31,10 @@
                     1
                 </div>
                 <div class="instruction">
-                    <i class="fa-solid fa-mobile-screen-button instruction__icon"></i>
+                    <div class="instruction-icons">
+                        <i class="fa-solid fa-mobile-screen-button instruction-icons__notcolored"></i>
+                        <i class="fa-solid fa-mobile-screen-button instruction-icons__colored"></i>
+                    </div>
                     Choisissez un restaurant
                 </div>
             </div>
@@ -40,7 +43,10 @@
                     2
                 </div>
                 <div class="instruction">
-                    <i class="fa-solid fa-list instruction__icon"></i>
+                    <div class="instruction-icons">
+                        <i class="fa-solid fa-list instruction-icons__notcolored"></i>
+                        <i class="fa-solid fa-list instruction-icons__colored"></i>
+                    </div>
                     Composez votre menu
                 </div>
             </div>
@@ -49,7 +55,10 @@
                     3
                 </div>
                 <div class="instruction">
-                    <i class="fa-solid fa-store instruction__icon"></i>
+                    <div class="instruction-icons">
+                        <i class="fa-solid fa-store instruction-icons__notcolored"></i>
+                        <i class="fa-solid fa-store instruction-icons__colored"></i>
+                    </div>
                     Dégustez au restaurant
                 </div>
             </div>
@@ -57,12 +66,14 @@
         <div class="restaurants">
             <h2>Restaurants</h2>
             <div class="restaurant">
+                <a class="restaurant__link" href="./la_palette_du_gout.html"></a>
                 <div class="restaurant-image">
                     <img src="public\assets\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="restaurant-image__img"/>
                     <div class="restaurant-image__new">Nouveau</div>
                 </div>
                 <div class="restaurant-miscellanous">
                     <div class="restaurant-infos">
+                        <a class="restaurant-infos__link" href="./la_palette_du_gout.html"></a>
                         <h3 class="restaurant-infos__title">
                             La palette du goût
                         </h3>
@@ -70,16 +81,22 @@
                             Ménilmontant
                         </p>
                     </div>
-                    <i class="fa-regular fa-heart fa-xl"></i>
+                    <div class="restaurant-icons">
+                        <i class="fa-regular fa-heart fa-xl restaurant-icons__regular"></i>
+                        <i class="fa-solid fa-heart fa-xl restaurant-icons__solid"></i>
+                    </div>
+                    
                 </div>
             </div>
             <div class="restaurant">
+                <a class="restaurant__link" href="./la_note_enchantee.html"></a>
                 <div class="restaurant-image">
                     <img src="public\assets\images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" class="restaurant-image__img"/>
                     <div class="restaurant-image__new">Nouveau</div>
                 </div>
                 <div class="restaurant-miscellanous">
                     <div class="restaurant-infos">
+                        <a class="restaurant-infos__link" href="./la_note_enchantee.html"></a>
                         <h3 class="restaurant-infos__title">
                             La note enchantée
                         </h3>
@@ -87,15 +104,20 @@
                             Charonne
                         </p>
                     </div>
-                    <i class="fa-regular fa-heart fa-xl"></i>
+                    <div class="restaurant-icons">
+                        <i class="fa-regular fa-heart fa-xl restaurant-icons__regular"></i>
+                        <i class="fa-solid fa-heart fa-xl restaurant-icons__solid"></i>
+                    </div>
                 </div>
             </div>
             <div class="restaurant">
+                <a class="restaurant__link" href="./a_la_francaise.html"></a>
                 <div class="restaurant-image">
                     <img src="public\assets\images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="restaurant-image__img"/>
                 </div>
                 <div class="restaurant-miscellanous">
                     <div class="restaurant-infos">
+                        <a class="restaurant-infos__link" href="./a_la_francaise.html"></a>
                         <h3 class="restaurant-infos__title">
                             À la française
                         </h3>
@@ -103,15 +125,20 @@
                             Cité Rouge
                         </p>
                     </div>
-                    <i class="fa-regular fa-heart fa-xl"></i>
+                    <div class="restaurant-icons">
+                        <i class="fa-regular fa-heart fa-xl restaurant-icons__regular"></i>
+                        <i class="fa-solid fa-heart fa-xl restaurant-icons__solid"></i>
+                    </div>
                 </div>
             </div>
             <div class="restaurant">
+                <a class="restaurant__link" href="./le_delice_des_sens.html"></a>
                 <div class="restaurant-image">
                     <img src="public\assets\images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="restaurant-image__img"/>
                 </div>
                 <div class="restaurant-miscellanous">
                     <div class="restaurant-infos">
+                        <a class="restaurant-infos__link" href="./le_delice_des_sens.html"></a>
                         <h3 class="restaurant-infos__title">
                             Le délice des sens
                         </h3>
@@ -119,7 +146,10 @@
                             Folie-Méricourt
                         </p>
                     </div>
-                    <i class="fa-regular fa-heart fa-xl"></i>
+                    <div class="restaurant-icons">
+                        <i class="fa-regular fa-heart fa-xl restaurant-icons__regular"></i>
+                        <i class="fa-solid fa-heart fa-xl restaurant-icons__solid"></i>
+                    </div>
                 </div>
             </div>
         </div>
