@@ -51,6 +51,10 @@
     &:hover {
         background-color: lighten(map-get($colors, color-primary), $amount: 35);
     }
+    &:hover i {
+        color: map-get($colors, color-primary);
+    }
+    
     &__number {
         color: white;
         position: relative;
@@ -86,11 +90,24 @@
 }
 
 .restaurant-image {
+    position: relative;
     &__img {
         height: 150px;
         width: 100%;
         object-fit: cover;
         border-radius: 15px;
+    }
+    &__new {
+        width: 25%;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: darken(map-get($colors, color-tertiary), $amount: 40);
+        background-color: map-get($colors, color-tertiary);
     }
 }
 
@@ -107,6 +124,6 @@
         margin: 0px;
     }
     &__description {
-        margin-bottom: 0px;
+        margin: 5px 0 0 0;
     }
 }

@@ -1,6 +1,10 @@
 @import "../utils/variables";
 @import "../components/button";
 
+.body {
+    background-color: map-get($colors, background-secondary-color);
+}
+
 .menu-illustration {
     &__img {
         height: 225px;
@@ -33,6 +37,15 @@
     }
 }
 
+.menu-content {
+    &__set {
+        font-weight: lighter;
+    }
+    &__set:not(.menu-content__set:nth-child(1)) {
+        margin-top: 50px;
+    }
+}
+
 .choice-content {
     display: flex;
     flex-direction: row;
@@ -42,8 +55,22 @@
     margin-bottom: 15px;
     background-color: white;
     border-radius: 15px;
+    -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1); //dup
+    box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1);
 }
 
-body {
-    background-color: map-get($colors, background-secondary-color);
+.choice-description {
+    &__title {
+        margin-top: 0px;
+    }
+    &__content {
+        margin: 0px;
+    }
+}
+
+.choice-price {
+    &__value {
+        font-weight: bold;
+        margin: 0px;
+    }
 }
