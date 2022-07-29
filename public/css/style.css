@@ -377,6 +377,14 @@ button::after {
     top: 0px;
   }
 }
+@keyframes rotate {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .body {
   background-color: #f6f6f6;
 }
@@ -436,10 +444,9 @@ button::after {
 .choice-content {
   cursor: pointer;
   position: relative;
-  z-index: 1;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-end;
   padding: 10px;
   margin-bottom: 15px;
@@ -479,34 +486,64 @@ button::after {
 .choice-content--10 {
   animation-delay: 1250ms;
 }
-.choice-content:hover::after {
-  opacity: 1;
+.choice-content:hover .choice-button {
+  transform: translateX(-75px);
 }
-.choice-content::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: -1;
-  border-radius: 15px;
-  -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
-  transition: opacity 250ms ease-in-out;
+.choice-content:hover .choice-description {
+  width: 60%;
+}
+.choice-content:hover .choice-validation__check {
+  animation: rotate 750ms ease-in-out both;
 }
 
-.choice-description__title {
+.choice-description {
+  width: 90%;
+  transition: width 250ms ease-in-out;
+}
+.choice-description__title, .choice-description__content {
   margin-top: 0px;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .choice-description__content {
   margin: 0px;
 }
 
+.choice-price {
+  width: 10%;
+}
 .choice-price__value {
   font-weight: bold;
   margin: 0px;
+}
+
+.choice-button {
+  text-align: center;
+  line-height: 45.3667px;
+  position: absolute;
+  top: 0;
+  right: -75px;
+  background-color: #99E2D0;
+  height: 46.3667px;
+  padding: 10px 0 10px 0;
+  width: 75px;
+  transform-origin: right;
+  transition: transform 250ms ease-in-out;
+}
+
+.choice-validation {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  background-color: white;
+  border-radius: 50px;
+}
+.choice-validation__check {
+  color: #99E2D0;
 }
 
 html {

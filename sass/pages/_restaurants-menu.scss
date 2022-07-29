@@ -19,6 +19,15 @@
     }
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(90deg); 
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .body {
     background-color: map-get($colors, background-secondary-color);
 }
@@ -82,10 +91,10 @@
 .choice-content {
     cursor: pointer;
     position: relative;
-    z-index: 1;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    //justify-content: space-between;
     align-items: flex-end;
     padding: 10px;
     margin-bottom: 15px;
@@ -103,29 +112,27 @@
         }
     }
     &:hover {
-        &::after {
-            opacity: 1;
+        .choice-button {
+            transform: translateX(-75px);
         }
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        opacity: 0;
-        z-index: -1;
-        border-radius: 15px;
-        -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6); 
-        box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6);
-        transition: opacity 250ms ease-in-out;
+        .choice-description {
+           width: 60%;
+        }
+        .choice-validation__check {
+            animation: rotate 750ms ease-in-out both;
+        }
     }
 }
 
 .choice-description {
-    &__title {
+    width: 90%;
+    transition: width 250ms ease-in-out;
+    &__title, &__content {
         margin-top: 0px;
+        white-space: nowrap; 
+        width: 100%; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
     }
     &__content {
         margin: 0px;
@@ -133,8 +140,37 @@
 }
 
 .choice-price {
+    width: 10%;
     &__value {
         font-weight: bold;
         margin: 0px;
     }
 }
+
+.choice-button {
+    text-align: center;
+    line-height: 45.3667px;
+    position: absolute;
+    top: 0;
+    right: -75px;
+    background-color: map-get($colors, color-tertiary);
+    height: 46.3667px;
+    padding: 10px 0 10px 0;
+    width: 75px;
+    transform-origin:right;
+    transition: transform 250ms ease-in-out;
+}
+
+.choice-validation {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background-color: white;
+    border-radius: 50px;
+    &__check {
+        color: map-get($colors, color-tertiary);
+    }
+}
+
