@@ -79,6 +79,47 @@ button::after {
   transition: opacity 250ms ease-in-out;
 }
 
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: fade 0s 3s linear forwards;
+  animation-direction: reverse;
+}
+.loader__container {
+  padding: 40px;
+  border: 6px solid #9356DC;
+  border-bottom-color: transparent;
+  border-radius: 100px;
+  animation: loader 1s linear 3;
+  height: 0;
+  width: 0;
+}
+
+.content {
+  animation: fade 0s 3s linear backwards;
+}
+
 .location {
   text-align: center;
   display: flex;
@@ -383,7 +424,8 @@ html {
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100%;
   margin: 0px;
 }
 

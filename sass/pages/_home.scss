@@ -4,6 +4,50 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.loader {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: fade 0s 3s linear forwards;
+    animation-direction: reverse;
+    &__container {
+        padding: 40px;
+        border: 6px solid map-get($colors, color-primary);
+        border-bottom-color: transparent;
+        border-radius: 100px;
+        animation: loader 1s linear 3;
+        height: 0;
+        width: 0;
+    }
+}
+
+.content {
+    animation: fade 0s 3s linear backwards;
+}
+
 .location {
     text-align: center; // dup .explore, header, explanation
     display: flex;
