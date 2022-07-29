@@ -1,6 +1,24 @@
 @import "../utils/variables";
 @import "../components/button";
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes movemenu {
+    from {
+        top: 50px;
+    }
+    to {
+        top: 0px
+    }
+}
+
 .body {
     background-color: map-get($colors, background-secondary-color);
 }
@@ -37,6 +55,21 @@
     }
 }
 
+.menu-icons {
+    position: relative;
+    &:hover &__colored {
+        opacity: 1;
+    }
+    &__colored {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        color: map-get($colors, color-primary);
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+    }
+}
+
 .menu-content {
     &__set {
         font-weight: lighter;
@@ -47,6 +80,9 @@
 }
 
 .choice-content {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,6 +93,34 @@
     border-radius: 15px;
     -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1); //dup
     box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out backwards, movemenu 1s ease-in-out backwards;
+
+    $anim-delay: 125ms;
+
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6); 
+        box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6);
+        transition: opacity 250ms ease-in-out;
+    }
 }
 
 .choice-description {

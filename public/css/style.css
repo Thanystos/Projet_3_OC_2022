@@ -28,6 +28,13 @@ body {
   top: 24.75px;
   left: 15px;
 }
+.header a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 /*@include old-mobile {
         color: map-get($colors, color-tertiary);
@@ -354,6 +361,22 @@ button::after {
   transition: opacity 250ms ease-in-out;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes movemenu {
+  from {
+    top: 50px;
+  }
+  to {
+    top: 0px;
+  }
+}
 .body {
   background-color: #f6f6f6;
 }
@@ -388,6 +411,21 @@ button::after {
   margin: 50px 0 15px 0;
 }
 
+.menu-icons {
+  position: relative;
+}
+.menu-icons:hover .menu-icons__colored {
+  opacity: 1;
+}
+.menu-icons__colored {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  color: #9356DC;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
 .menu-content__set {
   font-weight: lighter;
 }
@@ -396,6 +434,9 @@ button::after {
 }
 
 .choice-content {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -406,6 +447,54 @@ button::after {
   border-radius: 15px;
   -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out backwards, movemenu 1s ease-in-out backwards;
+}
+.choice-content--1 {
+  animation-delay: 125ms;
+}
+.choice-content--2 {
+  animation-delay: 250ms;
+}
+.choice-content--3 {
+  animation-delay: 375ms;
+}
+.choice-content--4 {
+  animation-delay: 500ms;
+}
+.choice-content--5 {
+  animation-delay: 625ms;
+}
+.choice-content--6 {
+  animation-delay: 750ms;
+}
+.choice-content--7 {
+  animation-delay: 875ms;
+}
+.choice-content--8 {
+  animation-delay: 1000ms;
+}
+.choice-content--9 {
+  animation-delay: 1125ms;
+}
+.choice-content--10 {
+  animation-delay: 1250ms;
+}
+.choice-content:hover::after {
+  opacity: 1;
+}
+.choice-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
+  transition: opacity 250ms ease-in-out;
 }
 
 .choice-description__title {
