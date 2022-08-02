@@ -1,3 +1,5 @@
+@import "../utils/mixins";
+
 .header {
     display: flex;
     justify-content:center;
@@ -6,6 +8,9 @@
         position: absolute;
         top: 24.75px;
         left: 15px;
+        @include tablet {
+            top: 40px;
+        }
     }
     & a {
         position: absolute;
@@ -15,13 +20,3 @@
         right: 0;
     }
 }
-
-
-
-
-
-
-/*@include old-mobile {
-        color: map-get($colors, color-tertiary);
-    }*
-*/

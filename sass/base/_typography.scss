@@ -1,4 +1,5 @@
 @import "./font";
+@import "../utils/mixins";
 
 * {
     font-family: Roboto;
@@ -10,4 +11,7 @@
 
 body {
     font-size: 12px;
+    @include tablet {
+        font-size: 18px;
+    }
 }

@@ -17,6 +17,11 @@
 body {
   font-size: 12px;
 }
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 18px;
+  }
+}
 
 .header {
   display: flex;
@@ -28,6 +33,11 @@ body {
   top: 24.75px;
   left: 15px;
 }
+@media screen and (min-width: 992px) {
+  .header__navigation-icon {
+    top: 40px;
+  }
+}
 .header a {
   position: absolute;
   top: 0;
@@ -36,10 +46,6 @@ body {
   right: 0;
 }
 
-/*@include old-mobile {
-        color: map-get($colors, color-tertiary);
-    }*
-*/
 .footer {
   color: white;
   background-color: #353535;
@@ -115,6 +121,42 @@ button::after {
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   transition: opacity 250ms ease-in-out;
 }
+@media screen and (min-width: 992px) {
+  button::after {
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  button {
+    font-size: 18px;
+    width: 220px;
+    height: 60px;
+    border-radius: 20px;
+  }
+}
+
+.love {
+  position: relative;
+}
+.love:hover .love__solid {
+  opacity: 1;
+}
+.love__regular {
+  color: #9356DC;
+}
+.love__solid {
+  color: #9356DC;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+@media screen and (min-width: 992px) {
+  .love__solid {
+    top: 9px;
+  }
+}
 
 @keyframes loader {
   0% {
@@ -176,6 +218,11 @@ button::after {
   padding: 30px;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 992px) {
+  .explore {
+    padding: 65px 30px 65px 30px;
+  }
+}
 .explore__title {
   margin: 0px;
   padding: 0 15px 0 15px;
@@ -184,11 +231,11 @@ button::after {
 .howitworks-part {
   max-width: 250px;
   margin: auto;
-  margin-top: 25px;
-  padding: 15px 15px 15px 25px;
+  padding: 45px 15px 45px 15px;
 }
 .howitworks-part__title {
   margin-bottom: 20px;
+  margin-top: 0px;
   position: relative;
   left: -10px;
 }
@@ -201,6 +248,7 @@ button::after {
 @media screen and (min-width: 992px) {
   .howitworks-part {
     max-width: 100%;
+    padding: 65px 15px 65px 15px;
   }
 }
 
@@ -245,6 +293,11 @@ button::after {
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   transition: opacity 250ms ease-in-out;
 }
+@media screen and (min-width: 992px) {
+  .explanation::after {
+    border-radius: 30px;
+  }
+}
 .explanation__number {
   color: white;
   position: relative;
@@ -256,8 +309,19 @@ button::after {
   background-color: #9356DC;
 }
 @media screen and (min-width: 992px) {
+  .explanation__number {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
   .explanation {
     width: 30%;
+    max-width: 320px;
+    margin-bottom: 0px;
+    height: 103px;
+    border-radius: 30px;
   }
 }
 
@@ -280,15 +344,27 @@ button::after {
   opacity: 0;
   transition: opacity 250ms ease-in-out;
 }
+@media screen and (min-width: 992px) {
+  .instruction-icons__colored {
+    top: 2px;
+  }
+}
 
 .restaurants-part {
   background-color: #f6f6f6;
-  padding: 15px;
+  padding: 45px 15px 45px 15px;
+}
+.restaurants-part__title {
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .restaurants-part__title {
     text-align: center;
-    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants-part {
+    padding: 65px 15px 65px 15px;
   }
 }
 
@@ -377,6 +453,11 @@ button::after {
   align-items: center;
   padding: 15px;
 }
+@media screen and (min-width: 992px) {
+  .restaurant-miscellanous {
+    height: 110px;
+  }
+}
 
 .restaurant-infos {
   padding-top: auto;
@@ -399,24 +480,6 @@ button::after {
 }
 .restaurant-infos__description {
   margin: 5px 0 0 0;
-}
-
-.restaurant-icons {
-  position: relative;
-}
-.restaurant-icons:hover .restaurant-icons__solid {
-  opacity: 1;
-}
-.restaurant-icons__regular {
-  color: #9356DC;
-}
-.restaurant-icons__solid {
-  color: #9356DC;
-  position: absolute;
-  top: 7px;
-  left: 0;
-  opacity: 0;
-  transition: opacity 250ms ease-in-out;
 }
 
 button {
@@ -449,6 +512,42 @@ button::after {
   -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   transition: opacity 250ms ease-in-out;
+}
+@media screen and (min-width: 992px) {
+  button::after {
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  button {
+    font-size: 18px;
+    width: 220px;
+    height: 60px;
+    border-radius: 20px;
+  }
+}
+
+.love {
+  position: relative;
+}
+.love:hover .love__solid {
+  opacity: 1;
+}
+.love__regular {
+  color: #9356DC;
+}
+.love__solid {
+  color: #9356DC;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+@media screen and (min-width: 992px) {
+  .love__solid {
+    top: 9px;
+  }
 }
 
 @keyframes fadeIn {
@@ -500,6 +599,11 @@ button::after {
   text-align: center;
   margin: 50px 0 15px 0;
 }
+@media screen and (min-width: 992px) {
+  .menu {
+    padding: 65px 15px 65px 15px;
+  }
+}
 
 .menu-header {
   display: flex;
@@ -513,24 +617,14 @@ button::after {
   }
 }
 
-.menu-icons {
-  position: relative;
-}
-.menu-icons:hover .menu-icons__colored {
-  opacity: 1;
-}
-.menu-icons__colored {
-  position: absolute;
-  top: 6px;
-  left: 0;
-  color: #9356DC;
-  opacity: 0;
-  transition: opacity 250ms ease-in-out;
-}
-
 .menu-content {
   max-width: 410px;
   margin: auto;
+}
+.menu-content__set {
+  font-weight: lighter;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .menu-content {
@@ -541,9 +635,10 @@ button::after {
     flex-wrap: wrap;
   }
 }
-.menu-content__set {
-  font-weight: lighter;
-  margin-top: 50px;
+@media screen and (min-width: 992px) {
+  .menu-content {
+    max-width: 1400px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -609,7 +704,12 @@ button::after {
   width: 60%;
 }
 .choice-content:hover .choice-validation__check {
-  animation: rotate 750ms ease-in-out both;
+  animation: rotate 350ms ease-in-out both;
+}
+@media screen and (min-width: 992px) {
+  .choice-content {
+    padding: 30px 10px 30px 10px;
+  }
 }
 
 .choice-description {
@@ -648,6 +748,12 @@ button::after {
   transform-origin: right;
   transition: transform 250ms ease-in-out;
 }
+@media screen and (min-width: 992px) {
+  .choice-button {
+    height: 108.4px;
+    line-height: 108.4px;
+  }
+}
 
 .choice-validation {
   display: inline-block;
@@ -684,6 +790,10 @@ ul {
 
 li {
   margin-bottom: 5px;
+}
+
+h2 {
+  margin: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

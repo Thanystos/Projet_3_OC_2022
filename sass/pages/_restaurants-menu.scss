@@ -1,5 +1,6 @@
 @import "../utils/variables";
 @import "../components/button";
+@import "../components/love";
 
 @keyframes fadeIn {
     from {
@@ -54,6 +55,9 @@
         text-align: center;
         margin: 50px 0 15px 0;
     }
+    @include tablet {
+        padding: 65px 15px 65px 15px;
+    }
 }
 
 .menu-header {
@@ -66,24 +70,14 @@
     }
 }
 
-.menu-icons {
-    position: relative;
-    &:hover &__colored {
-        opacity: 1;
-    }
-    &__colored {
-        position: absolute;
-        top: 6px;
-        left: 0;
-        color: map-get($colors, color-primary);
-        opacity: 0;
-        transition: opacity 250ms ease-in-out;
-    }
-}
-
 .menu-content {
     max-width: 410px;
     margin: auto;
+    &__set {
+        font-weight: lighter;
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
     @include mobile {
         max-width: 1000px;
         display: flex;
@@ -91,11 +85,9 @@
         justify-content: space-around;
         flex-wrap: wrap;
     }
-    &__set {
-        font-weight: lighter;
-        margin-top: 50px;
+    @include tablet {
+        max-width: 1400px;
     }
-    
 }
 
 .menu-group {
@@ -137,8 +129,11 @@
            width: 60%;
         }
         .choice-validation__check {
-            animation: rotate 750ms ease-in-out both;
+            animation: rotate 350ms ease-in-out both;
         }
+    }
+    @include tablet {
+        padding: 30px 10px 30px 10px;
     }
 }
 
@@ -175,8 +170,12 @@
     height: 46.3667px;
     padding: 10px 0 10px 0;
     width: 75px;
-    transform-origin:right;
+    transform-origin: right;
     transition: transform 250ms ease-in-out;
+    @include tablet {
+        height: 108.4px;
+        line-height: 108.4px;
+    }
 }
 
 .choice-validation {
