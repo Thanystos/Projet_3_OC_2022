@@ -46,7 +46,7 @@
 
 .content {
     animation: fade 0s 3s linear backwards;
-    max-width: 1000px;
+    max-width: 1500px;
     margin: auto;
 }
 
@@ -103,6 +103,7 @@
     position: relative;
     z-index: 1;
     cursor: pointer;
+    max-width: 288px;
     height: 60px;
     text-align: center;
     display: flex;
@@ -300,5 +301,31 @@
         left: 0;
         opacity: 0;
         transition: opacity 250ms ease-in-out;
+    }
+}
+
+.footer {
+    position:relative;
+    z-index: 10;
+    @include mobile {
+        text-align: center;
+    }
+    &__logo {
+        @include mobile {
+            text-align: center;
+        }
+    }
+    ul {
+        @include mobile {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        li {
+            @include tablet {
+                width: 40%;
+            }
+        }
     }
 }
