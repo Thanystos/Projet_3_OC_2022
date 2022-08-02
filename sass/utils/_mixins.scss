@@ -1,25 +1,13 @@
 @import "./variables";
 
-@mixin old-mobile {
-    @media screen and (max-width: map-get($breakpoints, oldmobile)) {
-        @content;
-    }
-}
-
 @mixin mobile {
-    @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @media screen and (min-width: map-get($breakpoints, mobile)) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (max-width: map-get($breakpoints, tablet)) {
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }

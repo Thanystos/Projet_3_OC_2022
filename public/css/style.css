@@ -125,6 +125,8 @@ button::after {
 
 .content {
   animation: fade 0s 3s linear backwards;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .location {
@@ -149,16 +151,35 @@ button::after {
   padding: 0 15px 0 15px;
 }
 
-.howitworks {
+.howitworks-part {
   max-width: 250px;
   margin: auto;
   margin-top: 25px;
   padding: 15px 15px 15px 25px;
 }
-.howitworks__title {
+.howitworks-part__title {
   margin-bottom: 20px;
   position: relative;
   left: -10px;
+}
+@media screen and (min-width: 768px) {
+  .howitworks-part__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .howitworks-part {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .howitworks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .explanation {
@@ -203,6 +224,11 @@ button::after {
   border-radius: 50%;
   background-color: #9356DC;
 }
+@media screen and (min-width: 992px) {
+  .explanation {
+    width: 30%;
+  }
+}
 
 .instruction {
   display: flex;
@@ -224,9 +250,23 @@ button::after {
   transition: opacity 250ms ease-in-out;
 }
 
-.restaurants {
+.restaurants-part {
   background-color: #f6f6f6;
   padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants-part__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 .restaurant {
@@ -257,14 +297,28 @@ button::after {
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   transition: opacity 250ms ease-in-out;
 }
-.restaurant__link {
+@media screen and (min-width: 768px) {
+  .restaurant {
+    width: 44%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant {
+    width: 22%;
+  }
+}
+
+.restaurant-image {
+  position: relative;
+  max-height: 150px;
+}
+.restaurant-image__link {
   position: absolute;
   top: 0;
-  bottom: 65px;
+  bottom: 0;
   left: 0;
   right: 0;
 }
-
 .restaurant-image__img {
   height: 150px;
   width: 100%;
@@ -273,7 +327,7 @@ button::after {
 }
 .restaurant-image__new {
   cursor: pointer;
-  width: 25%;
+  padding: 3px 10px 3px 10px;
   height: 25px;
   text-align: center;
   line-height: 25px;
@@ -294,13 +348,18 @@ button::after {
 }
 
 .restaurant-infos {
-  width: 90%;
+  padding-top: auto;
+  width: 80%;
+  height: inherit;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .restaurant-infos__link {
   position: absolute;
   top: -15px;
-  bottom: 0;
+  bottom: -15px;
   left: -15px;
   right: 0;
 }
