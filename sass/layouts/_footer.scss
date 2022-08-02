@@ -1,11 +1,36 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 .footer {
     color: white;
     background-color: map-get($colors, background-tertiary-color);
     padding: 15px;
+    position:relative;
+    z-index: 10;
+    @include mobile {
+        text-align: center;
+    }
     &__logo {
         margin-top: 0px;
+        @include mobile {
+            text-align: center;
+        }
+    }
+    ul {
+        @include mobile {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        li {
+            @include mobile {
+                width: 40%;
+            }
+            @include tablet {
+                width: 22%;
+            }
+        }
     }
 }
 
@@ -15,3 +40,26 @@
         margin-right: 5px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

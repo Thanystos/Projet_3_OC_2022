@@ -30,6 +30,8 @@
 
 .body {
     background-color: map-get($colors, background-secondary-color);
+    max-width: 1500px;
+    margin: auto;
 }
 
 .menu-illustration {
@@ -47,6 +49,11 @@
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     padding: 15px;
+    background-color: map-get($colors, background-secondary-color);
+    &__order {
+        text-align: center;
+        margin: 50px 0 15px 0;
+    }
 }
 
 .menu-header {
@@ -54,13 +61,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-.menu {
-    background-color: map-get($colors, background-secondary-color);
-    &__order {
-        text-align: center;
-        margin: 50px 0 15px 0;
+    @include mobile {
+        justify-content: space-around;
     }
 }
 
@@ -80,11 +82,28 @@
 }
 
 .menu-content {
+    max-width: 410px;
+    margin: auto;
+    @include mobile {
+        max-width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
     &__set {
         font-weight: lighter;
-    }
-    &__set:not(.menu-content__set:nth-child(1)) {
         margin-top: 50px;
+    }
+    
+}
+
+.menu-group {
+    @include mobile {
+        width: 45%;
+    }
+    @include tablet {
+        width: 30%;
     }
 }
 
@@ -94,7 +113,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    //justify-content: space-between;
     align-items: flex-end;
     padding: 10px;
     margin-bottom: 15px;

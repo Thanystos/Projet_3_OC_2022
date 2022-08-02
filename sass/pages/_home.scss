@@ -303,29 +303,3 @@
         transition: opacity 250ms ease-in-out;
     }
 }
-
-.footer {
-    position:relative;
-    z-index: 10;
-    @include mobile {
-        text-align: center;
-    }
-    &__logo {
-        @include mobile {
-            text-align: center;
-        }
-    }
-    ul {
-        @include mobile {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        li {
-            @include tablet {
-                width: 40%;
-            }
-        }
-    }
-}
