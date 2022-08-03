@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Shrikland";
-  src: url("../../public/assets/polices/Shrikhand-Regular.ttf");
+  src: url("../../assets/polices/Shrikhand-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../../public/assets/polices//Roboto/Roboto-Regular.ttf");
+  src: url("../../assets/polices/Roboto-Regular.ttf");
 }
 * {
   font-family: Roboto;
@@ -201,6 +201,7 @@ button::after {
 }
 
 .content {
+  animation: fade 0s 3s linear backwards;
   max-width: 1500px;
   margin: auto;
 }
