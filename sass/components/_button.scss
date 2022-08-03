@@ -5,8 +5,7 @@ button {
     z-index: 1;
     cursor: pointer;
     background: linear-gradient(355deg, map-get($colors, color-primary) 25%, map-get($colors, color-secondary) 100%);
-    -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1); 
-    box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1);
+    @include boxshadow;
     width: 175px;
     height: 35px;
     border: none;
@@ -18,19 +17,8 @@ button {
         }
     }
     &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        opacity: 0;
-        z-index: -1;
+        @include boxshadowhover;
         background: linear-gradient(355deg, lighten(map-get($colors, color-primary), 5) 25%, lighten(map-get($colors, color-secondary), 5) 100%);
-        border-radius: 15px;
-        -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6); 
-        box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6);
-        transition: opacity 250ms ease-in-out;
         @include tablet {
             border-radius: 20px;
         }

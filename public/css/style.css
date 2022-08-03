@@ -25,8 +25,10 @@ body {
 
 .header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
 }
 .header__navigation-icon {
   position: absolute;
@@ -71,6 +73,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: stretch;
     flex-wrap: wrap;
   }
 }
@@ -115,11 +118,11 @@ button::after {
   bottom: 0;
   opacity: 0;
   z-index: -1;
-  background: linear-gradient(355deg, #a16be0 25%, #ff93e1 100%);
   border-radius: 15px;
   -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   transition: opacity 250ms ease-in-out;
+  background: linear-gradient(355deg, #a16be0 25%, #ff93e1 100%);
 }
 @media screen and (min-width: 992px) {
   button::after {
@@ -179,8 +182,10 @@ button::after {
   width: 100%;
   margin: auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   position: absolute;
   animation: fade 0s 3s linear forwards;
   animation-direction: reverse;
@@ -196,17 +201,16 @@ button::after {
 }
 
 .content {
-  animation: fade 0s 3s linear backwards;
   max-width: 1500px;
   margin: auto;
 }
 
 .location {
-  text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   background-color: #eaeaea;
 }
 .location__icon {
@@ -235,7 +239,6 @@ button::after {
 }
 .howitworks-part__title {
   margin-bottom: 20px;
-  margin-top: 0px;
   position: relative;
   left: -10px;
 }
@@ -243,6 +246,7 @@ button::after {
   .howitworks-part__title {
     text-align: center;
     margin-bottom: 30px;
+    left: 0px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -257,6 +261,8 @@ button::after {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: nowrap;
   }
 }
 
@@ -268,7 +274,10 @@ button::after {
   height: 60px;
   text-align: center;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
   background-color: #f6f6f6;
   -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
@@ -287,11 +296,11 @@ button::after {
   bottom: 0;
   opacity: 0;
   z-index: -1;
-  background-color: #f2eafb;
   border-radius: 15px;
   -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   transition: opacity 250ms ease-in-out;
+  background-color: #f2eafb;
 }
 @media screen and (min-width: 992px) {
   .explanation::after {
@@ -327,6 +336,10 @@ button::after {
 
 .instruction {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
   font-weight: bold;
 }
 
@@ -371,8 +384,10 @@ button::after {
 @media screen and (min-width: 768px) {
   .restaurants {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
   }
 }
 
@@ -380,11 +395,10 @@ button::after {
   position: relative;
   z-index: 1;
   max-width: 350px;
-  margin: auto;
+  margin: auto auto 20px auto;
   background-color: white;
   -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
   border-radius: 15px;
 }
 .restaurant:hover::after {
@@ -451,6 +465,7 @@ button::after {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   padding: 15px;
 }
 @media screen and (min-width: 992px) {
@@ -467,6 +482,8 @@ button::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
 }
 .restaurant-infos__link {
   position: absolute;
@@ -507,11 +524,11 @@ button::after {
   bottom: 0;
   opacity: 0;
   z-index: -1;
-  background: linear-gradient(355deg, #a16be0 25%, #ff93e1 100%);
   border-radius: 15px;
   -webkit-box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.6);
   transition: opacity 250ms ease-in-out;
+  background: linear-gradient(355deg, #a16be0 25%, #ff93e1 100%);
 }
 @media screen and (min-width: 992px) {
   button::after {
@@ -590,14 +607,18 @@ button::after {
   position: relative;
   top: -35px;
   background-color: white;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-radius: 25px 25px 0px 0px;
   padding: 15px;
   background-color: #f6f6f6;
 }
 .menu__order {
   text-align: center;
   margin: 50px 0 15px 0;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    border-radius: 35px 35px 0px 0px;
+  }
 }
 @media screen and (min-width: 992px) {
   .menu {
@@ -610,6 +631,7 @@ button::after {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
 }
 @media screen and (min-width: 768px) {
   .menu-header {
@@ -623,8 +645,7 @@ button::after {
 }
 .menu-content__set {
   font-weight: lighter;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin: 50px 0px 40px 0px;
 }
 @media screen and (min-width: 768px) {
   .menu-content {
@@ -632,6 +653,7 @@ button::after {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: stretch;
     flex-wrap: wrap;
   }
 }
@@ -658,7 +680,9 @@ button::after {
   overflow: hidden;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-end;
+  flex-wrap: nowrap;
   padding: 10px;
   margin-bottom: 15px;
   background-color: white;

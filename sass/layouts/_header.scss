@@ -1,22 +1,20 @@
 @import "../utils/mixins";
 
 .header {
-    display: flex;
-    justify-content:center;
-    align-items: center;
+    @include flex($justify: center, $align: center);
     &__navigation-icon {
         position: absolute;
-        top: 24.75px;
-        left: 15px;
+            top: 24.75px;
+            left: 15px;
         @include tablet {
             top: 40px;
         }
     }
     & a {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
     }
 }

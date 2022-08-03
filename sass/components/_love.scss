@@ -11,8 +11,8 @@
     &__solid {
         color: map-get($colors, color-primary);
         position: absolute;
-        top: 7px;
-        left: 0;
+            top: 7px;
+            left: 0;
         opacity: 0;
         transition: opacity 250ms ease-in-out;
         @include tablet {

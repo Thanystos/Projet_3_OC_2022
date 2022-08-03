@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 @import "../components/button";
 @import "../components/love";
 
@@ -45,15 +46,17 @@
 
 .menu {
     position: relative;
-    top: -35px;
+        top: -35px;
     background-color: white;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-radius: 25px 25px 0px 0px;
     padding: 15px;
     background-color: map-get($colors, background-secondary-color);
     &__order {
         text-align: center;
         margin: 50px 0 15px 0;
+    }
+    @include mobile {
+        border-radius: 35px 35px 0px 0px;
     }
     @include tablet {
         padding: 65px 15px 65px 15px;
@@ -61,10 +64,7 @@
 }
 
 .menu-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex($justify: space-between, $align: center);
     @include mobile {
         justify-content: space-around;
     }
@@ -75,15 +75,11 @@
     margin: auto;
     &__set {
         font-weight: lighter;
-        margin-top: 50px;
-        margin-bottom: 40px;
+        margin: 50px 0px 40px 0px;
     }
     @include mobile {
         max-width: 1000px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        @include flex($justify: space-around, $wrap: wrap);
     }
     @include tablet {
         max-width: 1400px;
@@ -103,17 +99,14 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    @include flex($align: flex-end);
     padding: 10px;
     margin-bottom: 15px;
     background-color: white;
     border-radius: 15px;
-    -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1); //dup
+    -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1);
     box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1);
     animation: fadeIn 1s ease-in-out backwards, movemenu 1s ease-in-out backwards;
-
     $anim-delay: 125ms;
 
     @for $i from 1 through 10 {
@@ -126,7 +119,7 @@
             transform: translateX(-75px);
         }
         .choice-description {
-           width: 60%;
+            width: 60%;
         }
         .choice-validation__check {
             animation: rotate 350ms ease-in-out both;
@@ -164,8 +157,8 @@
     text-align: center;
     line-height: 45.3667px;
     position: absolute;
-    top: 0;
-    right: -75px;
+        top: 0;
+        right: -75px;
     background-color: map-get($colors, color-tertiary);
     height: 46.3667px;
     padding: 10px 0 10px 0;
@@ -190,4 +183,3 @@
         color: map-get($colors, color-tertiary);
     }
 }
-

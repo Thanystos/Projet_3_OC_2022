@@ -11,3 +11,10 @@ $breakpoints: (
     mobile: 768px,
     tablet: 992px
 );
+
+$flex: (
+    flexdirection: row,
+    flexjustify: flex-start,
+    flexalign: stretch,
+    flexwrap: nowrap
+);

@@ -1,10 +1,11 @@
 {
   "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "",
+  "description": "Le projet 3 du parcours développeur WEB d'Openclassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss:public/css/style.css"
+    "sass": "sass --watch sass/main.scss:public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Thanystos/Projet_3_OC_2022/issues"
   },

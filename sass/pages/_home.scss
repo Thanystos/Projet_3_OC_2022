@@ -28,9 +28,7 @@
     height: 100%;
     width: 100%;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex($justify: center, $align: center);
     position: absolute;
     animation: fade 0s 3s linear forwards;
     animation-direction: reverse;
@@ -46,17 +44,13 @@
 }
 
 .content {
-    animation: fade 0s 3s linear backwards;
+    //animation: fade 0s 3s linear backwards;
     max-width: 1500px;
     margin: auto;
 }
 
 .location {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flex($justify: center, $align: center);
     background-color: map-get($colors, background-primary-color);
     &__icon {
         margin-right: 15px;
@@ -82,12 +76,12 @@
     padding: 45px 15px 45px 15px;
     &__title {
         margin-bottom: 20px;
-        margin-top: 0px;
         position: relative;
-        left: -10px;
+            left: -10px;
         @include mobile {
             text-align: center;
             margin-bottom: 30px;
+            left: 0px;
         }
     }
     @include tablet {
@@ -98,9 +92,7 @@
 
 .howitworks {
     @include tablet {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flex($justify: space-around);
     }
 }
 
@@ -111,11 +103,9 @@
     max-width: 288px;
     height: 60px;
     text-align: center;
-    display: flex;
-    align-items: center;
+    @include flex($align: center);
     background-color: map-get($colors, background-secondary-color);
-    -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1); //dup
-    box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1);
+    @include boxshadow;
     margin-bottom: 30px;
     border-radius: 15px;
     &:hover {
@@ -124,19 +114,8 @@
         }
     }
     &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        opacity: 0;
-        z-index: -1;
+        @include boxshadowhover;
         background-color: lighten(map-get($colors, color-primary), $amount: 35);
-        border-radius: 15px;
-        -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6); 
-        box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6);
-        transition: opacity 250ms ease-in-out;
         @include tablet {
             border-radius: 30px;
         }
@@ -166,19 +145,19 @@
 }
 
 .instruction {
-    display: flex;
+    @include flex;
     font-weight: bold;
 }
 
 .instruction-icons {
     position: relative;
     & i {
-    margin: 0 20px 0 10px;
+        margin: 0 20px 0 10px;
     }
     &__colored {
         position: absolute;
-        top: 0;
-        left: 0;
+            top: 0;
+            left: 0;
         color: map-get($colors, color-primary);
         opacity: 0;
         transition: opacity 250ms ease-in-out;
@@ -204,9 +183,7 @@
 
 .restaurants {
     @include mobile {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
+        @include flex($wrap: wrap);
     }
 }
 
@@ -214,11 +191,9 @@
     position: relative;
     z-index: 1;
     max-width: 350px;
-    margin: auto;
+    margin: auto auto 20px auto;
     background-color: white;
-    -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1); 
-    box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    @include boxshadow;
     border-radius: 15px;
     &:hover {
         &::after {
@@ -226,18 +201,7 @@
         }
     }
     &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        opacity: 0;
-        z-index: -1;
-        border-radius: 15px;
-        -webkit-box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6); 
-        box-shadow: 0px 8px 15px 3px rgba(0,0,0,0.6);
-        transition: opacity 250ms ease-in-out;
+        @include boxshadowhover;
     }
     @include mobile {
         width: 44%;
@@ -252,10 +216,10 @@
     max-height: 150px;
     &__link {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
     }
     &__img {
         height: 150px;
@@ -271,18 +235,15 @@
         line-height: 25px;
         font-weight: bold;
         position: absolute;
-        top: 20px;
-        right: 20px;
+            top: 20px;
+            right: 20px;
         color: darken(map-get($colors, color-tertiary), $amount: 40);
         background-color: map-get($colors, color-tertiary);
     }
 }
 
 .restaurant-miscellanous {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex($justify: space-between, $align: center);
     padding: 15px;
     @include tablet {
         height: 110px;
@@ -294,15 +255,13 @@
     width: 80%;
     height: inherit;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex($direction: column, $justify: center);
     &__link {
         position: absolute;
-        top: -15px;
-        bottom: -15px;
-        left: -15px;
-        right: 0;
+            top: -15px;
+            bottom: -15px;
+            left: -15px;
+            right: 0;
     }
     &__title {
         margin: 0px;
