@@ -476,7 +476,6 @@ button::after {
 }
 
 .restaurant-infos {
-  padding-top: auto;
   width: 80%;
   height: inherit;
   position: relative;
