@@ -119,7 +119,7 @@
             transform: translateX(-75px);
         }
         .choice-description {
-            width: 60%;
+            width: calc(100% - 23px - 75px);
         }
         .choice-validation__check {
             animation: rotate 350ms ease-in-out both;
@@ -131,7 +131,7 @@
 }
 
 .choice-description {
-    width: 90%;
+    width: calc(100% - 23px);
     transition: width 250ms ease-in-out;
     &__title, &__content {
         margin-top: 0px;
